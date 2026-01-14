@@ -41,8 +41,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - MANTRAED_TOKEN=<your-agent-token>
-      - MANTRAED_HOST=https://mantrae.example.com
+      - TOKEN=<your-agent-token>
+      - HOST=https://mantrae.example.com
     restart: unless-stopped
 ```
 
@@ -53,8 +53,8 @@ docker run -d \
   --name mantraed \
   --network host \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -e MANTRAED_TOKEN=<your-agent-token> \
-  -e MANTRAED_HOST=https://mantrae.example.com \
+  -e TOKEN=<your-agent-token> \
+  -e HOST=https://mantrae.example.com \
   --restart unless-stopped \
   ghcr.io/mizuchilabs/mantraed:latest
 ```
@@ -64,8 +64,8 @@ docker run -d \
 Download the latest release from [releases](https://github.com/MizuchiLabs/mantraed/releases) and run:
 
 ```bash
-export MANTRAED_TOKEN=<your-agent-token>
-export MANTRAED_HOST=https://mantrae.example.com
+export TOKEN=<your-agent-token>
+export HOST=https://mantrae.example.com
 ./mantraed
 ```
 
@@ -73,11 +73,11 @@ export MANTRAED_HOST=https://mantrae.example.com
 
 ### Environment Variables
 
-| Variable         | Required | Description                                                     |
-| ---------------- | -------- | --------------------------------------------------------------- |
-| `MANTRAED_TOKEN` | Yes      | Authentication token from Mantræ server                         |
-| `MANTRAED_HOST`  | Yes      | URL of your Mantræ server (e.g., `https://mantrae.example.com`) |
-| `DOCKER_HOST`    | No       | Docker socket path (default: `unix:///var/run/docker.sock`)     |
+| Variable      | Required | Description                                                     |
+| ------------- | -------- | --------------------------------------------------------------- |
+| `TOKEN`       | Yes      | Authentication token from Mantræ server                         |
+| `HOST`        | Yes      | URL of your Mantræ server (e.g., `https://mantrae.example.com`) |
+| `DOCKER_HOST` | No       | Docker socket path (default: `unix:///var/run/docker.sock`)     |
 
 ### Getting an Agent Token
 
@@ -116,8 +116,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - MANTRAED_TOKEN=<token-for-host1>
-      - MANTRAED_HOST=https://mantrae.example.com
+      - TOKEN=<token-for-host1>
+      - HOST=https://mantrae.example.com
     restart: unless-stopped
 ```
 
@@ -127,8 +127,8 @@ Each agent will report its hostname and containers independently to the Mantræ 
 
 ### Agent not connecting to Mantræ
 
-- Verify the `MANTRAED_HOST` URL is accessible from the agent
-- Check that the `MANTRAED_TOKEN` is valid and not expired
+- Verify the `HOST` URL is accessible from the agent
+- Check that the `TOKEN` is valid and not expired
 - Ensure network connectivity between agent and server
 
 ### Containers not being detected
