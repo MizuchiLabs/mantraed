@@ -1,4 +1,6 @@
 <p align="center">
+<img src="https://raw.githubusercontent.com/MizuchiLabs/mantrae/refs/heads/main/.github/logo.svg" width="80">
+<br><br>
 <img alt="GitHub Tag" src="https://img.shields.io/github/v/tag/MizuchiLabs/mantraed?label=Version">
 <img alt="GitHub License" src="https://img.shields.io/github/license/MizuchiLabs/mantraed">
 <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/MizuchiLabs/mantraed">
