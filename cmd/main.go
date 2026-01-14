@@ -42,8 +42,8 @@ func main() {
 		Commands: []*cli.Command{
 			{
 				Name:  "update",
-				Usage: "Check for updates or update mantrae-agent to the latest version",
-				Description: `Check if a newer version of mantrae-agent is available.
+				Usage: "Check for updates or update mantraed to the latest version",
+				Description: `Check if a newer version of mantraed is available.
 Use the --install flag to download and install the latest version.
 
 Note: Automatic installation does not work inside Docker containers.`,
