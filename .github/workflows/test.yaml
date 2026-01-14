@@ -1,0 +1,55 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.go"
+      - "go.mod"
+      - "go.sum"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**.go"
+      - "go.mod"
+      - "go.sum"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: "go.mod"
+
+      - name: Install Task
+        uses: go-task/setup-task@v1
+
+      - name: Lint
+        run: |
+          task lint
+
+      - name: Run GolangCI-Lint
+        uses: golangci/golangci-lint-action@v9
+        with:
+          skip-cache: true
+          args: --timeout=10m
+
+      - name: Run security checks
+        uses: securego/gosec@master
+        with:
+          args: -exclude-generated ./...
+
+      - name: ghcr.io cleanup
+        uses: dataaxiom/ghcr-cleanup-action@v1
+        with:
+          keep-n-tagged: 20
+          delete-untagged: true
+          delete-ghost-images: true
+          delete-partial-images: true
+          delete-orphaned-images: true

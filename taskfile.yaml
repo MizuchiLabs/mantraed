@@ -1,0 +1,54 @@
+version: "3"
+
+output: prefixed
+
+env:
+  CGO_ENABLED: 0
+  IMAGE_DEV: ko.local/mantraed
+
+tasks:
+  dev:
+    desc: Run binary
+    cmds:
+      - go run cmd/main.go
+    silent: false
+
+  # 󰉠  Lint / static checks
+  lint:
+    desc: Run go vet & lint
+    cmds:
+      - go mod tidy
+      - go fmt ./...
+      - go vet ./...
+
+  # 󰚰 Update deps
+  update:
+    desc: Update dependencies
+    cmds:
+      - go get -u ./...
+
+  #  Generate code
+  gen:
+    desc: Generate necessary files
+    cmds:
+      - buf generate
+
+  snapshot:
+    desc: Snapshot
+    cmds:
+      - goreleaser --snapshot --clean --skip=validate
+
+  # 󱓞  Release
+  release:
+    desc: Release
+    deps: [build:web]
+    cmds:
+      - goreleaser release --clean --skip=validate
+
+  # 󰡨  Build container
+  docker:
+    desc: Build local test container with ko
+    deps: [build:web]
+    cmds:
+      - KO_DOCKER_REPO=$IMAGE_DEV ko build ./cmd --bare
+      - grype $IMAGE_DEV
