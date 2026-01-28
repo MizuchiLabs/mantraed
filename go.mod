@@ -11,7 +11,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20
 	github.com/traefik/paerser v0.2.2
 	github.com/traefik/traefik/v3 v3.6.7
-	github.com/urfave/cli/v3 v3.6.1
+	github.com/urfave/cli/v3 v3.6.2
 	google.golang.org/protobuf v1.36.11
 )
 
