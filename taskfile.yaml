@@ -7,12 +7,6 @@ env:
   IMAGE_DEV: ko.local/mantraed
 
 tasks:
-  dev:
-    desc: Run binary
-    cmds:
-      - go run cmd/main.go
-    silent: false
-
   # 󰉠  Lint / static checks
   lint:
     desc: Run go vet & lint
@@ -20,12 +14,19 @@ tasks:
       - go mod tidy
       - go fmt ./...
       - go vet ./...
+      - go test -cover ./...
 
   # 󰚰 Update deps
   update:
     desc: Update dependencies
     cmds:
       - go get -u ./...
+
+  #   Build
+  build:
+    desc: Build binary
+    cmds:
+      - go build -ldflags="-s -w" -trimpath -o bin/mantraed
 
   #  Generate code
   gen:
