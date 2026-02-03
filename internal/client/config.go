@@ -6,7 +6,6 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"sync"
 	"time"
 
 	"github.com/lmittmann/tint"
@@ -28,45 +27,35 @@ type Config struct {
 	HealthTimeout       time.Duration
 }
 
-var once sync.Once
-
 func Load(cmd *cli.Command) (*Config, error) {
-	config := &Config{}
-	var err error
+	if cmd == nil {
+		return nil, errors.New("no command provided")
+	}
 
-	once.Do(func() {
-		if cmd == nil {
-			return
-		}
+	initLogger(cmd)
 
-		initLogger(cmd)
+	token := cmd.String("token")
+	host := cmd.String("host")
+	if token == "" || host == "" {
+		return nil, errors.New("token and host are required")
+	}
 
-		token := cmd.String("token")
-		host := cmd.String("host")
-		if token == "" || host == "" {
-			err = errors.New("token and host are required")
-			return
-		}
+	profileID, agentID, err := parseToken(token)
+	if err != nil {
+		return nil, err
+	}
 
-		profileID, agentID, errTok := parseToken(token)
-		if errTok != nil {
-			err = errTok
-			return
-		}
-
-		config = &Config{
-			Token:               token,
-			ServerURL:           util.CleanURL(host),
-			ProfileID:           profileID,
-			AgentID:             agentID,
-			ActiveIP:            "",
-			HealthCheckInterval: 15 * time.Second,
-			UpdateInterval:      10 * time.Second,
-			ConnectionTimeout:   10 * time.Second,
-			HealthTimeout:       5 * time.Second,
-		}
-	})
-	return config, err
+	return &Config{
+		Token:               token,
+		ServerURL:           util.CleanURL(host),
+		ProfileID:           profileID,
+		AgentID:             agentID,
+		ActiveIP:            "",
+		HealthCheckInterval: 15 * time.Second,
+		UpdateInterval:      10 * time.Second,
+		ConnectionTimeout:   10 * time.Second,
+		HealthTimeout:       5 * time.Second,
+	}, nil
 }
 
 func initLogger(cmd *cli.Command) {
