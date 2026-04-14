@@ -15,10 +15,9 @@ import (
 )
 
 var (
-	Version = "debug"
-	Commit  string
-	Date    string
-	Dirty   string
+	Version = "dev"
+	Commit  = "none"
+	Date    = "unknown"
 )
 
 func main() {
@@ -26,8 +25,8 @@ func main() {
 		EnableShellCompletion: true,
 		Suggest:               true,
 		Name:                  "mantraed",
-		Version:               Version,
-		Usage:                 "mantraed [command]",
+		Version:               fmt.Sprintf("%s (commit: %s, built: %s)", Version, Commit, Date),
+		Usage:                 "mantrae daemon",
 		Action: func(ctx context.Context, cmd *cli.Command) error {
 			cfg, err := client.Load(cmd)
 			if err != nil {
@@ -54,11 +53,6 @@ Note: Automatic installation does not work inside Docker containers.`,
 			},
 		},
 		Flags: []cli.Flag{
-			&cli.BoolFlag{
-				Name:    "version",
-				Aliases: []string{"v"},
-				Usage:   "Display version information and exit",
-			},
 			&cli.BoolFlag{
 				Name:    "debug",
 				Aliases: []string{"d"},
