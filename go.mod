@@ -10,7 +10,7 @@ require (
 	github.com/mattn/go-colorable v0.1.14
 	github.com/mattn/go-isatty v0.0.21
 	github.com/traefik/paerser v0.2.2
-	github.com/traefik/traefik/v3 v3.6.13
+	github.com/traefik/traefik/v3 v3.6.14
 	github.com/urfave/cli/v3 v3.8.0
 	google.golang.org/protobuf v1.36.11
 )
