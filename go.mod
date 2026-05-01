@@ -10,14 +10,14 @@ require (
 	github.com/mattn/go-colorable v0.1.14
 	github.com/mattn/go-isatty v0.0.22
 	github.com/traefik/paerser v0.2.2
-	github.com/traefik/traefik/v3 v3.6.14
+	github.com/traefik/traefik/v3 v3.6.15
 	github.com/urfave/cli/v3 v3.8.0
 	google.golang.org/protobuf v1.36.11
 )
 
 require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
-	github.com/aws/smithy-go v1.24.3 // indirect
+	github.com/aws/smithy-go v1.25.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
@@ -31,7 +31,7 @@ require (
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/fxamacker/cbor/v2 v2.9.1 // indirect
-	github.com/go-acme/lego/v4 v4.34.0 // indirect
+	github.com/go-acme/lego/v4 v4.35.2 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.1 // indirect
