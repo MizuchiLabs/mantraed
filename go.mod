@@ -7,7 +7,7 @@ require (
 	connectrpc.com/connect v1.19.2
 	github.com/docker/docker v28.5.2+incompatible
 	github.com/lmittmann/tint v1.1.3
-	github.com/mattn/go-colorable v0.1.14
+	github.com/mattn/go-colorable v0.1.15
 	github.com/mattn/go-isatty v0.0.22
 	github.com/traefik/paerser v0.2.2
 	github.com/traefik/traefik/v3 v3.6.17
