@@ -10,7 +10,7 @@ require (
 	github.com/mattn/go-colorable v0.1.15
 	github.com/mattn/go-isatty v0.0.22
 	github.com/traefik/paerser v0.2.2
-	github.com/traefik/traefik/v3 v3.6.17
+	github.com/traefik/traefik/v3 v3.6.20
 	github.com/urfave/cli/v3 v3.8.0
 	google.golang.org/protobuf v1.36.11
 )
@@ -29,7 +29,7 @@ require (
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/emicklei/go-restful/v3 v3.13.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
-	github.com/fsnotify/fsnotify v1.9.0 // indirect
+	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/fxamacker/cbor/v2 v2.9.1 // indirect
 	github.com/go-acme/lego/v4 v4.35.2 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
