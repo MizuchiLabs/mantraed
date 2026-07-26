@@ -153,6 +153,8 @@ github.com/mattn/go-isatty v0.0.22 h1:j8l17JJ9i6VGPUFUYoTUKPSgKe/83EYU2zBC7YNKMw
 github.com/mattn/go-isatty v0.0.22/go.mod h1:ZXfXG4SQHsB/w3ZeOYbR0PrPwLy+n6xiMrJlRFqopa4=
 github.com/mattn/go-isatty v0.0.23 h1:cYwCQTQf3HB6xUC+BtyCLZNr7IzbOmoZbmssVNzSyiQ=
 github.com/mattn/go-isatty v0.0.23/go.mod h1:nMCL3Zebbrt45jsMDgnfIwz6ydEQApk5oEI3HqDio6A=
+github.com/mattn/go-isatty v0.0.24 h1:tGZZoVgT/KiqK1c8ocVLeDS8BSWMRd47J3Lbz7vsReI=
+github.com/mattn/go-isatty v0.0.24/go.mod h1:nMCL3Zebbrt45jsMDgnfIwz6ydEQApk5oEI3HqDio6A=
 github.com/miekg/dns v1.1.72 h1:vhmr+TF2A3tuoGNkLDFK9zi36F2LS+hKTRW0Uf8kbzI=
 github.com/miekg/dns v1.1.72/go.mod h1:+EuEPhdHOsfk6Wk5TT2CzssZdqkmFhf8r+aVyDEToIs=
 github.com/moby/docker-image-spec v1.3.1 h1:jMKff3w6PgbfSa69GfNg+zN/XLhfXJGnEx3Nl2EsFP0=
@@ -222,6 +224,8 @@ github.com/traefik/traefik/v3 v3.6.22 h1:b+V4ouLDhE2HJMf+uziIWQA3QIBAD7UhjCx7Xyk
 github.com/traefik/traefik/v3 v3.6.22/go.mod h1:DHpm4Uq71C71CCj+mrRpgWlG+ORQTIY41KoSSsf3tfc=
 github.com/traefik/traefik/v3 v3.6.23 h1:pKYq9TpCPCnrXysTmot+b4eMAflWsvCYolOCybCFc68=
 github.com/traefik/traefik/v3 v3.6.23/go.mod h1:zt2AVxHnjnDPcxn5gHP89GfTVUMhSHQWhD2slgzv8s0=
+github.com/traefik/traefik/v3 v3.6.24 h1:AFGmzWpYbEsEttInHwxtJv68qXnvUw8Ns4Pl0BBmNRc=
+github.com/traefik/traefik/v3 v3.6.24/go.mod h1:5muazDutf7NMEq4kZdkNsXvFLbId0Mdpjs0iPtPFFwc=
 github.com/unrolled/render v1.7.0 h1:1yke01/tZiZpiXfUG+zqB+6fq3G4I+KDmnh0EhPq7So=
 github.com/unrolled/render v1.7.0/go.mod h1:LwQSeDhjml8NLjIO9GJO1/1qpFJxtfVIpzxXKjfVkoI=
 github.com/urfave/cli/v3 v3.8.0 h1:XqKPrm0q4P0q5JpoclYoCAv0/MIvH/jZ2umzuf8pNTI=
