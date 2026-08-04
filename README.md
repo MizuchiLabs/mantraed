@@ -6,6 +6,10 @@
 <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/MizuchiLabs/mantraed">
 </p>
 
+## 👋 Heads up!
+
+Development has officially moved to [Tether](https://github.com/MizuchiLabs/tether) and [Tetherd](https://github.com/MizuchiLabs/tetherd)
+
 # Mantraed
 
 **Mantraed** (Mantræ daemon) is the agent component for [Mantræ](https://github.com/MizuchiLabs/mantrae), a web-based configuration manager for Traefik. Mantraed monitors Docker containers in real-time and automatically syncs their Traefik labels to your Mantræ server.
