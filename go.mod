@@ -4,13 +4,13 @@ go 1.26.0
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.11-20260709200747-435963d16310.1
-	connectrpc.com/connect v1.19.2
+	connectrpc.com/connect v1.20.0
 	github.com/docker/docker v28.5.2+incompatible
-	github.com/lmittmann/tint v1.1.3
+	github.com/lmittmann/tint v1.2.0
 	github.com/mattn/go-colorable v0.1.15
 	github.com/mattn/go-isatty v0.0.24
 	github.com/traefik/paerser v0.2.3
-	github.com/traefik/traefik/v3 v3.6.25
+	github.com/traefik/traefik/v3 v3.7.10
 	github.com/urfave/cli/v3 v3.10.1
 	google.golang.org/protobuf v1.36.11
 )
